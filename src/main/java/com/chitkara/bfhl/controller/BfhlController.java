@@ -19,7 +19,10 @@ public class BfhlController {
     public BfhlController(BfhlService bfhlService) {
         this.bfhlService = bfhlService;
     }
-
+    @GetMapping
+    public ResponseEntity<String> getInfo() {
+        return ResponseEntity.ok("BFHL API is running. Use POST request on this endpoint.");
+    }
     /**
      * POST /bfhl
      * Accepts a JSON body with a "data" array and returns categorized results.
